@@ -1,0 +1,78 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF to Excel Converter</title>
+</head>
+<body>
+    <h1>PDF to Excel Converter</h1>
+
+    {% if download_link %}
+    <p>{{ message }}</p>
+    <a href="/output/{{ download_link }}" download><button>Download Excel File</button></a>
+    {% endif %}
+
+    <form method="POST" enctype="multipart/form-data">
+        <h2>Upload a PDF File</h2>
+        <input type="file" name="file" accept=".pdf">
+        <button type="submit">Convert to Excel</button>
+    </form>
+
+    <form method="POST" enctype="multipart/form-data">
+        <h2>Convert All PDFs in a Folder</h2>
+        <label for="folder">Specify the folder path containing PDFs:</label>
+        <input type="text" name="folder" id="folder" placeholder="Path to folder containing PDFs">
+        <button type="submit">Convert All</button>
+    </form>
+
+</body>
+</html>
+
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PDF to Excel Converter</title>
+
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/styles.css') }}"
+    />
+  </head>
+
+  <body class="body">
+    <form class="container">
+      <h1>PDF to Excel Converter</h1>
+
+      {% if download_link %}
+      <p>{{ message }}</p>
+      <a href="/output/{{ download_link }}" download
+        ><button>Download Excel File</button></a
+      >
+      {% endif %}
+
+      <form class="h1" method="POST" enctype="multipart/form-data">
+        <h2>Upload a PDF File</h2>
+        <input class="h2" type="file" name="file" accept=".pdf" />
+        <button type="submit">Convert to Excel</button>
+
+        <form method="POST" enctype="multipart/form-data">
+          <h2>Convert All PDFs in a Folder</h2>
+          <label for="folder">Specify the folder path containing PDFs:</label>
+          <input
+            class="h2"
+            type="text"
+            name="folder"
+            id="folder"
+            placeholder="Path to folder containing PDFs"
+          />
+          <button type="submit">Convert All</button>
+        </form>
+      </form>
+    </form>
+  </body>
+</html>

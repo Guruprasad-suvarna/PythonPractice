@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+   <style>
+     .container{
+            top:50%;
+            left:50%;
+            position: absolute;
+            transform:translate(-50%,-50%);
+        }
+    
+  </style>
+  <body bgcolor="#8896AB">
+    <p style="border: 10px;">
+
+     
+        <div class="container">
+          <!-- <form action="/action_page.php"> -->
+          <form action="{{url_for('email')}}" method="POST"  >
+             <!-- <label for="fname">From:</label>
+             <input type="text" id="fname" name="fname"  required /><br /><br /> -->
+
+             <label for="lname">To:</label>
+             <input type="text" id="To" name="To" required /><br /><br />
+
+             <label for="lname">Cc:</label>
+             <input type="text" id="lname" name="lname" /><br /><br />
+
+             <label for="lname">Subject:</label>
+             <input type="text" id="Subject" name="Subject" /><br /><br />
+
+         
+             <label for="lname">Type message:</label ><br>
+             <textarea class="pp" type="text" id="msg" name="msg" rows="5" cols="50"></textarea><br /><br />
+             
+             <button type="submit" class="btn">Submit</button>
+             
+             <button type="Cancel" class="btn" onclick="cancelFunction()">Cancel</button>
+          
+          
+          <form>
+         
+   
+           
+       </div> 
+      </center>
+
+    </p>
+    <script>
+     
+      
+      function cancelFunction() {
+   
+      document.getElementById("fname").value = "";
+      document.getElementById("To").value = "";
+      document.getElementById("lname").value = "";
+      }
+      </script>
+      </body>
+      </html>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous"
+  />
+  <head>
+    <style>
+      .button {
+        background-color: #466346;
+        border: none;
+        color: white;
+        padding: 20px 622px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 20px;
+        margin: 2px 2px;
+        cursor: pointer;
+      }
+      .btn {
+        margin-top: 500px;
+        margin-left: 800pt;
+      }
+    </style>
+  </head>
+  <body>
+    <a class="button">Email</a>
+
+    <form action="{{url_for('components')}}" method="GET" class="btn">
+      <input type="submit" value="Compose" />
+    </form>
+    <!-- <button type="button" class="btn btn-outline-success">
+      <a href="components.html">Compose</a>
+    </button> -->
+  </body>
+</html>

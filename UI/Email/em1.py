@@ -8,11 +8,12 @@ from flask_mail import  Mail,Message
 
 
 app = Flask(__name__)
-# list1=["pavan@hexaware.com","shrunga@hexaware.com","chitra@hexaware.com","krishnendu@hexaware.com","sagar@hexaware.com","sandeep@hexaware.com","guruprasad@hexaware.com"]
+
 app.config['MAIL_SERVER'] ='smtp.gmail.com'
 app.config['MAIL_PORT'] = 465
-app.config['MAIL_USERNAME'] = "guruprasadsuvarna58@gmail.com"
-app.config['MAIL_PASSWORD'] = "hcqpppucltwlotqz"
+
+# app.config['MAIL_USERNAME'] = "" username
+# app.config['MAIL_PASSWORD'] = "" password
 app.config['MAIL_USE_TLS'] = False
 app.config['MAIL_USE_SSL'] = True
 
@@ -41,7 +42,7 @@ def email():
       Subject=request.form['Subject']
       msg=request.form['msg']
 
-      message=Message(Subject,sender="guruprasadsuvarna58@gmail.com",recipients=[To])
+    #   message=Message(Subject,sender="guruprasadsuvarna58@gmail.com",recipients=[To])
       message.body=msg
       mail.send(message)
       success="message snt"
